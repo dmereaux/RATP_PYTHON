@@ -3,7 +3,7 @@ class calcul_tarif():
     tarifbase = 1.5
     def tarif(self,age,touriste):
         self.tarifbase = self.get()
-        if (age > self.age_enfant):
+        if (age < self.age_enfant):
             if (touriste):
                 return self.tarifbase
             return self.tarifbase/2

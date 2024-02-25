@@ -11,9 +11,23 @@ def fix_setUpTearDown():
     yield
     print("after")
 
-def test_one(mocker):
+def test_enfant_parisien(mocker):
     mocker.patch('calcul_tarif.calcul_tarif.get',return_value=1.4)
-    print("test")
     calcul = calcul_tarif()
     y=calcul.tarif(4,True)
-    assert y == 1.5
+    assert y == 1.4
+def test_adulte_touriste(mocker):
+    mocker.patch('calcul_tarif.calcul_tarif.get',return_value=1.4)
+    calcul = calcul_tarif()
+    y=calcul.tarif(20,True)
+    assert y == 2.8
+def test_adulte_parisien(mocker):
+    mocker.patch('calcul_tarif.calcul_tarif.get',return_value=1.4)
+    calcul = calcul_tarif()
+    y=calcul.tarif(20,False)
+    assert y == 1.4
+def test_enfant_parisien(mocker):
+    mocker.patch('calcul_tarif.calcul_tarif.get',return_value=1.4)
+    calcul = calcul_tarif()
+    y=calcul.tarif(7,False)
+    assert y == 0.7
