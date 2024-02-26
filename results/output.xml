@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.6 on darwin)" generated="2024-02-26T19:58:31.204860" rpa="false" schemaversion="5">
+<suite id="s1" name="RATP Python" source="/Users/dominiquemereaux/code/RATP_Python">
+<suite id="s1-s1" name="test R" source="/Users/dominiquemereaux/code/RATP_Python/test_R">
+<suite id="s1-s1-s1" name="Test Tarif" source="/Users/dominiquemereaux/code/RATP_Python/test_R/test_tarif.robot">
+<test id="s1-s1-s1-t1" name="test frais 2" line="8">
+<kw name="calcul tarif ticket metro" owner="wrapper">
+<msg time="2024-02-26T19:58:31.227320" level="INFO">${x} = 3.0</msg>
+<var>${x}</var>
+<arg>20</arg>
+<arg>False</arg>
+<status status="PASS" start="2024-02-26T19:58:31.227115" elapsed="0.000278"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-02-26T19:58:31.227794" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${x}</arg>
+<arg>3.0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-02-26T19:58:31.227619" elapsed="0.000265"/>
+</kw>
+<status status="PASS" start="2024-02-26T19:58:31.226503" elapsed="0.001633"/>
+</test>
+<status status="PASS" start="2024-02-26T19:58:31.223442" elapsed="0.005148"/>
+</suite>
+<status status="PASS" start="2024-02-26T19:58:31.222124" elapsed="0.007333"/>
+</suite>
+<status status="PASS" start="2024-02-26T19:58:31.207625" elapsed="0.022428"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RATP Python">RATP Python</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="test R">RATP Python.test R</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Test Tarif">RATP Python.test R.Test Tarif</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
