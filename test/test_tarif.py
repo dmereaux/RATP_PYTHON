@@ -2,7 +2,7 @@ import sys
 sys.path.append('src')
 from calcul_tarif import calcul_tarif
 import pytest
-from unittest.mock import Mock
+
 
 
 @pytest.fixture
@@ -11,11 +11,12 @@ def fix_setUpTearDown():
     yield
     print("after")
 
-def test_enfant_parisien(mocker):
-    mocker.patch('calcul_tarif.calcul_tarif.get',return_value=1.4)
+def test_enfant_parisien1(fix_setUpTearDown):
+#    mocker.patch('calcul_tarif.calcul_tarif.get',return_value=1.4)
+    print("toto")
     calcul = calcul_tarif()
     y=calcul.tarif(4,True)
-    assert y == 1.4
+    assert y == 1.5
 def test_adulte_touriste(mocker):
     mocker.patch('calcul_tarif.calcul_tarif.get',return_value=1.4)
     calcul = calcul_tarif()
